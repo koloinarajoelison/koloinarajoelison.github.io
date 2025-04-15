@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Koloina Rajoelison - Community Manager et Communication Digitale">
+    <meta name="keywords" content="Koloina Rajoelison, Community Management, Communication Digitale, Portfolio, Marketing">
+    <title>Koloina Rajoelison - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #fcf9f2;
+            --text-color: #6d493b;
+            --button-bg: #f3e2d2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background-color: var(--bg-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-left: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            color: #8c6954;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 0 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 200px 0px;
+            gap: 4rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 3rem;
+        }
+
+        .hero-content h1.name {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content h2.catchphrase {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .hero-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-image {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--text-color);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--button-bg);
+            color: var(--text-color);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--button-bg);
+            color: var(--text-color);
+        }
+
+        /* Sections Générales */
+        .section-white {
+            background-color: white;
+        }
+
+        .section-separator {
+            height: 1px;
+            background-color: rgba(109, 73, 59, 0.1);
+            width: 80%;
+            margin: 2rem auto;
+        }
+
+        .section-padding {
+            padding: 100px 100px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Services */
+        .services, .projects, .process-steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card, .project-card, .process-step {
+            flex: 1;
+            background-color: #fff;
+            border: solid 2px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover, .project-card:hover, .process-step:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        /* About */
+        .about-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Expériences et Éducation */
+        .experience-card, .education-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-card:hover, .education-card:hover {
+            transform: translateX(10px);
+        }
+
+        /* Compétences */
+        .skills-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .skills-icons img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .skills-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-icons a {
+            color: var(--bg-color);
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--button-bg);
+        }
+
+        .text-center{
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 3rem 0 1rem;
+            }
+
+            .navbar-links {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                padding: 4rem 0 2rem;
+            }
+
+            .hero-content {
+                padding-right: 0;
+            }
+
+            .hero-content h2.catchphrase {
+                font-size: 2.5rem;
+            }
+
+            .services, .projects, .process-steps {
+                flex-direction: column;
+                margin-top: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .service-card, .project-card, .process-step {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-logo">Koloina Rajoelison</div>
+            <div class="navbar-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#about">À Propos</a>
+                <a href="#services">Services</a>
+                <a href="#experiences">Expériences</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="container hero">
+        <div class="hero-content">
+            <h1 class="name">Bonjour, je suis Koloina Rajoelison</h1>
+            <h2 class="catchphrase">J'accompagne les organisations dans leur transformation digitale</h2>
+            <p>Community Manager passionnée et communicante dynamique, je transforme les stratégies digitales en succès concrets.</p>
+            <div class="hero-cta">
+                <a href="#" class="btn btn-primary">
+                    <i class="fas fa-download"></i> Télécharger CV
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Me Contacter
+                </a>
+            </div>
+        </div>
+        <img src="koloinarajoelison.png" alt="Koloina Rajoelison" class="hero-image">
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">À Propos de Moi</h2>
+        <p class="text-center">Passionnée par la communication digitale, je combine créativité et stratégie pour aider les entreprises à se démarquer. Mon objectif est de créer des contenus impactants qui génèrent de l'engagement et des résultats.</p>
+        
+        <div class="about-stats">
+            <div class="stat">
+                <div class="stat-number">+4</div>
+                <p>Années d'Expérience</p>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15+</div>
+                <p>Projets Réalisés</p>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <p>Satisfaction Clients</p>
+            </div>
+        </div>
+        <div class="text-center mt-4" style="text-align: center; margin-top: 50px;">
+            <a href="#contact" class="btn btn-primary" style="padding: 16px 40px;">Me Contacter</a>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Services Section -->
+    <section id="services" class="container section-white section-padding">
+        <h2 class="section-title">Mes Services</h2>
+        <div class="services">
+            <div class="service-card">
+                <img src="commercialisation.png" alt="" height="200px">
+                <h3>Community Management</h3>
+                <p>Gestion stratégique des communautés en ligne.</p>
+            </div>
+            <div class="service-card">
+                <img src="redaction.png" alt="" height="200px">
+                <h3>Rédaction</h3>
+                <p>Création de contenu adapté à votre audience et vos objectifs.</p>
+            </div>
+            <div class="service-card">
+                <img src="meilleur.png" alt="" height="200px">
+                <h3>Régie Événementielle</h3>
+                <p>Organisation et coordination d'événements innovants et mémorables.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Expériences Section -->
+    <section id="experiences" class="container section-white section-padding">
+        <h2 class="section-title">Expériences Professionnelles</h2>
+        <div class="experience-card">
+            <img src="meilleur.png" alt="" height="150px">
+            <h3>Community Manager</h3>
+            <p>Kraken Production Fianarantsoa, 2025</p>
+            <p>Gestion des communautés et stratégie de communication digitale</p>
+            
+        </div>
+        <div class="experience-card">
+            <img src="meilleur.png" alt="" height="150px">
+            <h3>Community Manager</h3>
+            <p>AIO Compagnie Ambohibao, 2024</p>
+            <p>Gestion des communautés et stratégie de communication digitale</p>
+        </div>
+        <div class="experience-card">
+            <img src="meilleur.png" alt="" height="150px">
+            <h3>Responsable Communication</h3>
+            <p>Glam Agency Ambohibao, 2024</p>
+            <p>Définition et mise en oeuvre de la stratégie de la communication, gestion de l'image</p>
+        </div>
+        <div class="experience-card">
+            <img src="meilleur.png" alt="" height="150px">
+            <h3>Stage en Communication Evenementielle</h3>
+            <p>M-creat Ivandry, 2024</p>
+            <p>Gestion admnistrative et coordination logistique des évenements</p>
+        </div>
+        <div class="experience-card">
+            <img src="meilleur.png" alt="" height="150px">
+            <h3>Responsable Communication</h3>
+            <p>Association des Étudiants EMIT, 2022</p>
+            <p>Coordination des communications et événements étudiants</p>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Projets Section -->
+    <section id="projets" class="container">
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Campagne Social Media</h3>
+                <p>Développement d'une stratégie de communication digitale pour une entreprise locale.</p>
+            </div>
+            <div class="project-card">
+                <h3>Refonte et animation</h3>
+                <p>Audit de la présence digitale existante et refonte de l'identité d'une page Facebook.</p>
+            </div>
+            <div class="project-card">
+                <h3>Contenu de Marque</h3>
+                <p>Création de contenu éditorial et visuel pour différentes marques.</p>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Lancement d'un produit</h3>
+                <p>Planification d'un plan de communication, interaction avec les participants et publication d'un récapitulatif.</p>
+            </div>
+            <div class="project-card">
+                <h3>Événement porte ouverte</h3>
+                <p>Création de supports promotionnels, envoi d'invitations aux partenaires et au public.</p>
+            </div>
+            <div class="project-card">
+                <h3>Collaboration avec des influenceurs</h3>
+                <p>Séletion, prise de contact, négociation, mise en place de partenariats et suivi.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Compétences Section -->
+    <section class="container section-white section-padding">
+        <h2 class="section-title">Outils & Compétences</h2>
+        <div class="skills-icons">
+            <img src="canva.avif" alt="Canva">
+            <img src="photoshop.png" alt="Photoshop">
+            <img src="word.png" alt="Word">
+            <img src="powerpoint.png" alt="PowerPoint">
+            <img src="excell.png" alt="Excell">
+            <img src="meta.png" alt="Meta Business Suite">
+            <img src="capcut.png" alt="Capcut">
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+    <!-- Compétences Section -->
+    <section class="container section-white section-padding">
+        <h2 class="section-title">Langues</h2>
+        <div class="skills-icons">
+            <img src="canva.avif" alt="Canva">
+            <img src="photoshop.png" alt="Photoshop">
+            <img src="word.png" alt="Word">
+            <img src="powerpoint.png" alt="PowerPoint">
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Processus Section -->
+    <section class="container">
+        <h2 class="section-title">Mon Processus de Travail</h2>
+        <p class="text-center">Une approche méthodique et créative pour atteindre vos objectifs de communication.</p>
+        <div class="process-steps">
+            <div class="process-step">
+                <h3>Analyse</h3>
+                <p>Comprendre vos besoins et objectifs spécifiques.</p>
+            </div>
+            <div class="process-step">
+                <h3>Stratégie</h3>
+                <p>Développer un plan de communication sur mesure.</p>
+            </div>
+            <div class="process-step">
+                <h3>Exécution</h3>
+                <p>Mettre en œuvre la stratégie avec créativité et précision.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container section-white section-padding">
+        <h2 class="section-title">Me Contacter</h2>
+        <div class="text-center" style="text-align: center;">
+            <p style="margin-bottom: 20px;">Intéressé par une collaboration ? N'hésitez pas à me contacter.</p>
+            <a href="mailto:koloinarajoelison25@gmail.com" class="btn btn-primary">
+                <i class="fas fa-envelope"></i> Envoyer un Email
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 Koloina Rajoelison. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
