@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <!-- Google tag (gtag.js) -->
+  <head>
+        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPZDVL55FH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,556 +10,522 @@
 
   gtag('config', 'G-RPZDVL55FH');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Koloina Rajoelison - Community Manager et Communication Digitale">
-    <meta name="keywords" content="Koloina Rajoelison, Community Management, Communication Digitale, Portfolio, Marketing">
-    <title>Koloina Rajoelison - Portfolio</title>
-    <meta name="google-site-verification" content="PzwGmgA1qPG3FjxupU_ezlOJnjtuT_0_xvER4q_lGnE" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #fcf9f2;
-            --text-color: #6d493b;
-            --button-bg: #f3e2d2;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            width: 100%;
-            background-color: var(--bg-color);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .navbar-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 0;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .navbar-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .navbar-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            margin-left: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-links a:hover {
-            color: #8c6954;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 0 2rem;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 200px 0px;
-            gap: 4rem;
-        }
-
-        .hero-content {
-            flex: 1;
-            padding-right: 3rem;
-        }
-
-        .hero-content h1.name {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-content h2.catchphrase {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-        }
-
-        .hero-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-image {
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--text-color);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-image:hover {
-            transform: scale(1.05);
-        }
-
-        .hero-cta {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: all 0.5s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background-color: var(--button-bg);
-            color: var(--text-color);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            border: 2px solid var(--button-bg);
-            color: var(--text-color);
-        }
-
-        /* Sections Générales */
-        .section-white {
-            background-color: white;
-        }
-
-        .section-separator {
-            height: 1px;
-            background-color: rgba(109, 73, 59, 0.1);
-            width: 80%;
-            margin: 2rem auto;
-        }
-
-        .section-padding {
-            padding: 100px 100px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Services */
-        .services, .projects, .process-steps {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .service-card, .project-card, .process-step {
-            flex: 1;
-            background-color: #fff;
-            border: solid 2px rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover, .project-card:hover, .process-step:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--text-color);
-        }
-
-        /* About */
-        .about-stats {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 3rem;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        /* Expériences et Éducation */
-        .experience-card, .education-card {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .experience-card:hover, .education-card:hover {
-            transform: translateX(10px);
-        }
-
-        /* Compétences */
-        .skills-icons {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .skills-icons img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s ease;
-        }
-
-        .skills-icons img:hover {
-            transform: scale(1.2);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--text-color);
-            color: var(--bg-color);
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        .social-icons a {
-            color: var(--bg-color);
-            margin: 0 1rem;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--button-bg);
-        }
-
-        .text-center{
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 3rem 0 1rem;
-            }
-
-            .navbar-links {
-                display: none;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                padding: 4rem 0 2rem;
-            }
-
-            .hero-content {
-                padding-right: 0;
-            }
-
-            .hero-content h2.catchphrase {
-                font-size: 2.5rem;
-            }
-
-            .services, .projects, .process-steps {
-                flex-direction: column;
-                margin-top: 1.5rem;
-                gap: 1.5rem;
-            }
-
-            .service-card, .project-card, .process-step {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-content">
-            <div class="navbar-logo">Koloina Rajoelison</div>
-            <div class="navbar-links">
-                <a href="#accueil">Accueil</a>
-                <a href="#about">À Propos</a>
-                <a href="#services">Services</a>
-                <a href="#experiences">Expériences</a>
-                <a href="#projets">Projets</a>
-                <a href="#contact">Contact</a>
-            </div>
+    <meta charset="UTF-8" />
+        <meta name="google-site-verification" content="PzwGmgA1qPG3FjxupU_ezlOJnjtuT_0_xvER4q_lGnE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Koloina Rajoelison, social media manager et cheffe de projet spécialisée en communication digitale, marketing, création de contenu et pilotage de projets."
+    />
+    <meta name="author" content="Koloina Rajoelison" />
+    <meta
+      name="keywords"
+      content="Koloina Rajoelison, social media manager, cheffe de projet, communication digitale, marketing digital, création de contenu, portfolio"
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#FFF7EC" />
+    <link rel="canonical" href="https://koloinarajoelison.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="images/kr_logo.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Koloina Rajoelison" />
+    <meta property="og:title" content="Koloina Rajoelison | Social Media Manager &amp; Cheffe de Projet" />
+    <meta
+      property="og:description"
+      content="Portfolio de Koloina Rajoelison, social media manager et cheffe de projet spécialisée en communication digitale, marketing et création de contenu."
+    />
+    <meta property="og:url" content="https://koloinarajoelison.github.io/" />
+    <meta property="og:image" content="https://koloinarajoelison.github.io/images/koloina_rajoelison_hero.png" />
+    <meta property="og:image:alt" content="Portrait de Koloina Rajoelison" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Koloina Rajoelison | Social Media Manager &amp; Cheffe de Projet" />
+    <meta
+      name="twitter:description"
+      content="Communication digitale, marketing, création de contenu et pilotage de projets."
+    />
+    <meta name="twitter:image" content="https://koloinarajoelison.github.io/images/koloina_rajoelison_hero.png" />
+    <title>Koloina Rajoelison | Social Media Manager &amp; Cheffe de Projet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Chewy&family=Nunito:wght@400;500;600&family=Sour+Gummy:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Koloina Rajoelison",
+        "url": "https://koloinarajoelison.github.io/",
+        "image": "https://koloinarajoelison.github.io/images/koloina_rajoelison_hero.png",
+        "jobTitle": "Social Media Manager et Cheffe de Projet",
+        "knowsAbout": [
+          "Communication digitale",
+          "Marketing digital",
+          "Création de contenu",
+          "Rédaction web",
+          "Gestion de projet",
+          "SEO"
+        ]
+      }
+    </script>
+  </head>
+  <body class="is-loading">
+    <div class="page-loader" aria-hidden="true">
+      <div class="loader-card">
+        <img src="images/kr_logo.svg" alt="" />
+        <div class="loader-track">
+          <span></span>
         </div>
-    </nav>
+      </div>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="accueil" class="container hero">
-        <div class="hero-content">
-            <h1 class="name">Bonjour, je suis Koloina Rajoelison</h1>
-            <h2 class="catchphrase">J'accompagne les organisations dans leur transformation digitale</h2>
-            <p>Community Manager passionnée et communicante dynamique, je transforme les stratégies digitales en succès concrets.</p>
-            <div class="hero-cta">
-                <a href="#" class="btn btn-primary">
-                    <i class="fas fa-download"></i> Télécharger CV
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i> Me Contacter
-                </a>
-            </div>
-        </div>
-        <img src="koloinarajoelison.png" alt="Koloina Rajoelison" class="hero-image">
-    </section>
+    <header class="site-header" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="Koloina Rajoelison">
+        <img src="images/kr_logo.svg" alt="Logo KR de Koloina Rajoelison" />
+      </a>
 
-    <div class="section-separator"></div>
+      <nav class="main-nav" aria-label="Menu">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#experience">Parcours</a>
+      </nav>
 
-    <!-- About Section -->
-    <section id="about" class="container">
-        <h2 class="section-title">À Propos de Moi</h2>
-        <div class="experience-card">
-            <h3>Master I en Commnication Numérique et Management de Projet</h3>
-            <img src="emit.jpg" alt="" height="200px">
-            <p>EMIT Fianarantsoa</p>
-            <h3>Licence en Relations Publiques et Multimédia</h3>
-            <p>EMIT Fianarantsoa</p>
-            <h3>Baccalauréat Série D</h3>
-            <p>FMJ Tsaramasay</p>
-        <p class="text-center">Passionnée par la communication digitale, je combine créativité et stratégie pour aider les entreprises à se démarquer. Mon objectif est de créer des contenus impactants qui génèrent de l'engagement et des résultats.</p>
-        
-        <div class="about-stats">
-            <div class="stat">
-                <div class="stat-number">+4</div>
-                <p>Années d'Expérience</p>
-            </div>
-            <div class="stat">
-                <div class="stat-number">15+</div>
-                <p>Projets Réalisés</p>
-            </div>
-            <div class="stat">
-                <div class="stat-number">100%</div>
-                <p>Satisfaction Clients</p>
-            </div>
-        </div>
-        <div class="text-center mt-4" style="text-align: center; margin-top: 50px;">
-            <a href="#contact" class="btn btn-primary" style="padding: 16px 40px;">Me Contacter</a>
-        </div>
-    </section>
+      <a
+        class="contact-button"
+        href="#contact"
+        aria-label="Aller aux informations de contact de Koloina Rajoelison"
+      >
+        <span>Me contacter</span>
+        <img src="images/Phone.svg" alt="" aria-hidden="true" />
+      </a>
+    </header>
 
-    <div class="section-separator"></div>
+    <main>
+      <section id="accueil" class="hero" aria-labelledby="hero-title">
+        <div class="hero-stage">
+          <div class="hero-panel" aria-hidden="true"></div>
 
-    <!-- Services Section -->
-    <section id="services" class="container section-white section-padding">
-        <h2 class="section-title">Mes Services</h2>
-        <div class="services">
-            <div class="service-card">
-                <img src="commercialisation.png" alt="" height="200px">
-                <h3>Community Management</h3>
-                <p>Gestion stratégique des communautés en ligne.</p>
-            </div>
-            <div class="service-card">
-                <img src="redaction.png" alt="" height="200px">
-                <h3>Rédaction</h3>
-                <p>Création de contenu adapté à votre audience et vos objectifs.</p>
-            </div>
-            <div class="service-card">
-                <img src="meilleur.png" alt="" height="200px">
-                <h3>Régie Événementielle</h3>
-                <p>Organisation et coordination d'événements innovants et mémorables.</p>
-            </div>
-        </div>
-    </section>
+          <img
+            class="scribble scribble-rays"
+            src="images/scribble1.png"
+            width="316"
+            height="200"
+            alt=""
+            aria-hidden="true"
+            decoding="async"
+          />
+          <img
+            class="scribble scribble-star"
+            src="images/scribble2.png"
+            width="150"
+            height="180"
+            alt=""
+            aria-hidden="true"
+            decoding="async"
+          />
 
-    <div class="section-separator"></div>
+          <h1 id="hero-title" class="hero-title hero-title-left">
+            <span>Social Media</span>
+            <span>Manager</span>
+            <span class="sr-only"> &amp; Cheffe de Projet</span>
+          </h1>
 
-    <!-- Expériences Section -->
-    <section id="experiences" class="container section-white section-padding">
-        <h2 class="section-title">Expériences Professionnelles</h2>
-        <div class="experience-card">
-            <img src="kraken.jpg" alt="" height="200px">
-            <h3>Community Manager</h3>
-            <p>Kraken Production Fianarantsoa, 2025</p>
-            <p>Gestion des communautés et stratégie de communication digitale</p>
-            
-        </div>
-        <div class="experience-card">
-            <h3>Stagiaire en Community Numérique</h3>
-            <img src="madigicom.jpg" alt="" height="150px">
-            <p>Madigicom Fianarantsoa, 2025</p>
-            <p>Création de contenu adapté à votre audience et vos objectifs.</p>
-        </div>
-        <div class="experience-card">
-            <h3>Community Manager</h3>
-            <img src="aio.jpg" alt="" height="300px">
-            <p>AIO Compagnie Ambohibao, 2024</p>
-            <p>Gestion des communautés et stratégie de communication digitale</p>
-        </div>
-        <div class="experience-card">
-            <img src="glam.jpg" alt="" height="150px">
-            <h3>Responsable Communication</h3>
-            <p>Glam Agency Ambohibao, 2024</p>
-            <p>Définition et mise en oeuvre de la stratégie de la communication, gestion de l'image</p>
-        </div>
-        <div class="experience-card">
-            <img src="Mcreat.jpg" alt="" height="100px">
-            <h3>Stage en Communication Evenementielle</h3>
-            <p>M-creat Ivandry, 2024</p>
-            <p>Gestion admnistrative et coordination logistique des évenements</p>
-        </div>
-        <div class="experience-card">
-            <img src="aeemit.jpg" alt="" height="150px">
-            <h3>Responsable Communication</h3>
-            <p>Association des Étudiants EMIT, 2022</p>
-            <p>Coordination des communications et événements étudiants</p>
-        </div>
-    </section>
+          <p class="hero-title hero-title-right" aria-hidden="true">
+            <span>&amp; Cheffe</span>
+            <span>de Projet.</span>
+          </p>
 
-    <div class="section-separator"></div>
+          <p class="name-pill">Je suis Koloina 🌿</p>
 
-    <!-- Projets Section -->
-    <section id="projets" class="container">
-        <h2 class="section-title">Mes Projets</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Campagne Social Media</h3>
-                <p>Développement d'une stratégie de communication digitale pour une entreprise locale.</p>
-            </div>
-            <div class="project-card">
-                <h3>Refonte et animation</h3>
-                <p>Audit de la présence digitale existante et refonte de l'identité d'une page Facebook.</p>
-            </div>
-            <div class="project-card">
-                <h3>Contenu de Marque</h3>
-                <p>Création de contenu éditorial et visuel pour différentes marques.</p>
-            </div>
+          <img
+            class="hero-person"
+            src="images/koloina_rajoelison_hero.png"
+            width="842"
+            height="976"
+            alt="Portrait de Koloina Rajoelison"
+            decoding="async"
+            fetchpriority="high"
+          />
         </div>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Lancement d'un produit</h3>
-                <p>Planification d'un plan de communication, interaction avec les participants et publication d'un récapitulatif.</p>
-            </div>
-            <div class="project-card">
-                <h3>Événement porte ouverte</h3>
-                <p>Création de supports promotionnels, envoi d'invitations aux partenaires et au public.</p>
-            </div>
-            <div class="project-card">
-                <h3>Collaboration avec des influenceurs</h3>
-                <p>Séletion, prise de contact, négociation, mise en place de partenariats et suivi.</p>
-            </div>
-        </div>
-    </section>
 
-    <div class="section-separator"></div>
+        <div class="hero-bottom" aria-label="Présentation">
+          <p class="intro-copy">
+            Passionnée par la communication digitale, le marketing et la création
+            de contenu, j'accompagne les organisations dans le développement de
+            leur visibilité grâce à des stratégies de communication créatives, des
+            contenus engageants et une approche orientée résultats.
+          </p>
 
-    <!-- Compétences Section -->
-    <section class="container section-white section-padding">
-        <h2 class="section-title">Outils & Compétences</h2>
-        <div class="skills-icons">
-            <img src="canva.avif" alt="Canva">
-            <img src="photoshop.png" alt="Photoshop">
-            <img src="word.png" alt="Word">
-            <img src="powerpoint.png" alt="PowerPoint">
-            <img src="excell.png" alt="Excell">
-            <img src="meta.png" alt="Meta Business Suite">
-            <img src="capcut.png" alt="Capcut">
-        </div>
-    </section>
-
-    <div class="section-separator"></div>
-    <!-- Processus Section -->
-    <section class="container">
-        <h2 class="section-title">Mon Processus de Travail</h2>
-        <p class="text-center">Une approche méthodique et créative pour atteindre vos objectifs de communication.</p>
-        <div class="process-steps">
-            <div class="process-step">
-                <h3>Analyse</h3>
-                <p>Comprendre vos besoins et objectifs spécifiques.</p>
-            </div>
-            <div class="process-step">
-                <h3>Stratégie</h3>
-                <p>Développer un plan de communication sur mesure.</p>
-            </div>
-            <div class="process-step">
-                <h3>Exécution</h3>
-                <p>Mettre en œuvre la stratégie avec créativité et précision.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-separator"></div>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container section-white section-padding">
-        <h2 class="section-title">Me Contacter</h2>
-        <div class="text-center" style="text-align: center;">
-            <p style="margin-bottom: 20px;">Intéressé par une collaboration ? N'hésitez pas à me contacter.</p>
-            <a href="mailto:koloinarajoelison25@gmail.com" class="btn btn-primary">
-                <i class="fas fa-envelope"></i> Envoyer un Email
+          <div class="hero-actions" id="projets">
+            <a
+              class="action-button action-solid"
+              href="CV - Koloina Rajoelison - 2026.pdf"
+              download="CV - Koloina Rajoelison - 2026.pdf"
+            >
+              <span>Télécharger mon CV</span>
+              <img src="images/FileArrowDown.svg" alt="" aria-hidden="true" />
             </a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Koloina Rajoelison. Tous droits réservés.</p>
+      <section
+        id="services"
+        class="competences-section"
+        aria-labelledby="competences-title"
+      >
+        <div class="competences-inner">
+          <h2 id="competences-title" class="competences-title">
+            Compétences
+            <img
+              class="title-burst"
+              src="images/scribble1.png"
+              width="316"
+              height="338"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+            />
+          </h2>
+
+          <img
+            class="competence-star"
+            src="images/scribble2.png"
+            width="150"
+            height="238"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <div class="competence-cards">
+            <article class="competence-card card-pink card-communication">
+              <h3>Communication &amp;<br />Contenu</h3>
+              <img
+                class="competence-icon icon-chat"
+                src="images/skill1.svg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+              />
+              <p>
+                Communication numérique • Stratégie de contenu • Rédaction
+                (Copywriting) • Relations publiques
+              </p>
+            </article>
+
+            <article class="competence-card card-cream card-strategy">
+              <h3>Stratégie &amp;<br />Marketing</h3>
+              <img
+                class="competence-icon icon-megaphone"
+                src="images/skill2.svg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+              />
+              <p>
+                Marketing digitale • Référencement ou SEO • Google Analytics •
+                Benchmark • Veille stratégique
+              </p>
+            </article>
+
+            <article class="competence-card card-pink card-management">
+              <h3>Pilotage &amp;<br />Gestion</h3>
+              <img
+                class="competence-icon icon-growth"
+                src="images/skill3.svg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+              />
+              <p>
+                Gestion de projet • Travail collaboratif • Outils d'organisation
+                (Notion, Suite Microsoft)
+              </p>
+            </article>
+
+            <article class="competence-card card-cream card-visual">
+              <h3>Création<br />Visuelle &amp; Web</h3>
+              <img
+                class="competence-icon icon-browser"
+                src="images/skill4.svg"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+              />
+              <p>
+                Design (Canva, Figma, Adobe Express) • Notion Web (HTML, CSS, ...)
+                • Outils de collaboration (GitHub, ...)
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="apropos" class="about-section" aria-labelledby="about-title">
+        <div class="about-inner">
+          <div class="about-photo-frame">
+            <img
+              class="about-photo"
+              src="images/koloina_rajoelison_about.png"
+              width="1024"
+              height="1536"
+              alt="Koloina Rajoelison travaillant sur son ordinateur"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="about-content">
+            <h2 id="about-title" class="about-title">A PROPOS</h2>
+            <p class="about-kicker">Qui suis-je ?</p>
+            <p class="about-copy">
+              Passionnée par la communication digitale et le marketing, je
+              conçois des stratégies et des contenus qui renforcent l'image des
+              organisations et créent une véritable connexion avec leurs
+              communautés. Curieuse, créative et organisée, j'aime relever de
+              nouveaux défis et contribuer à des projets à fort impact.
+            </p>
+
+            <a
+              class="about-contact-button"
+              href="tel:+261000000000"
+              aria-label="Contacter Koloina Rajoelison par téléphone"
+            >
+              <span>Me contacter</span>
+              <img src="images/Phone.svg" alt="" aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="experience"
+        class="experience-section"
+        aria-labelledby="experience-title"
+      >
+        <div class="experience-panel">
+          <div class="experience-heading">
+            <h2 id="experience-title" class="experience-title">
+              Experience Pro
+            </h2>
+            <p class="experience-summary">
+              Un parcours construit entre communication digitale, marketing de
+              contenu et accompagnement de marques dans leur visibilité.
+            </p>
+          </div>
+
+          <div class="timeline-list">
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-date">Mai 2025 - Aujourd'hui</p>
+                <h3>Chargée de Communication &amp; Marketing</h3>
+                <p class="timeline-place">MaDigiCom</p>
+                <p>
+                  Création de contenus, stratégie de communication, marketing
+                  digital, gestion éditoriale et accompagnement de plusieurs
+                  marques.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-date">Septembre 2025 - Aujourd'hui</p>
+                <h3>Chargée de Communication &amp; Marketing</h3>
+                <p class="timeline-place">Kalyssi</p>
+                <p>
+                  Développement de la communication digitale, création de
+                  contenus, campagnes marketing et valorisation des solutions
+                  fintech.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-date">Novembre 2025 - Aujourd'hui</p>
+                <h3>Community Manager</h3>
+                <p class="timeline-place">ITalents</p>
+                <p>
+                  Gestion des réseaux sociaux, création de contenus,
+                  communication RH et développement de la marque employeur.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-date">Juin 2024 - Mars 2025</p>
+                <h3>Responsable Communication &amp; Marketing</h3>
+                <p class="timeline-place">Glam Agency</p>
+                <p>
+                  Élaboration de stratégies de communication, création de
+                  contenus et développement de la visibilité de l'agence.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-date">Mars 2024 - Mai 2024</p>
+                <h3>Stage en Communication Numérique</h3>
+                <p class="timeline-place">All In One</p>
+                <p>
+                  Participation à la communication digitale, création de
+                  supports de communication et animation des réseaux sociaux.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-date">Juin 2023 - Septembre 2023</p>
+                <h3>Stage en Communication Événementielle</h3>
+                <p class="timeline-place">MCreat</p>
+                <p>
+                  Participation à l'organisation et à la communication
+                  d'événements, création de supports de communication,
+                  coordination des actions de promotion et accompagnement des
+                  activités événementielles.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <p class="timeline-date">Octobre 2022 - Décembre 2022</p>
+                <h3>Community Manager</h3>
+                <p class="timeline-place">Association des Étudiants</p>
+                <p>
+                  Animation des communautés, couverture des activités de
+                  l'association et communication institutionnelle.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="education"
+        class="education-section"
+        aria-labelledby="education-title"
+      >
+        <div class="education-inner">
+          <div class="education-heading">
+            <h2 id="education-title" class="education-title">Education</h2>
+            <p>
+              Une formation orientée communication numérique, management de
+              projet et stratégie digitale.
+            </p>
+          </div>
+
+          <div class="education-cards">
+            <article class="education-card">
+              <p class="education-date">2024 - 2026</p>
+              <h3>Master 2 en Communication Numérique et Management de Projet</h3>
+              <p class="education-school">
+                École de Management et d'Innovation Technologique (EMIT) -
+                Fianarantsoa
+              </p>
+              <p>
+                Approfondissement des stratégies digitales, du marketing
+                numérique, de la communication des organisations et de la gestion
+                de projet.
+              </p>
+            </article>
+
+            <article class="education-card">
+              <p class="education-date">2021 - 2024</p>
+              <h3>Licence en Information et Communication</h3>
+              <p class="education-school">
+                École de Management et d'Innovation Technologique (EMIT) -
+                Fianarantsoa
+              </p>
+              <p class="education-award">🏆 Major de promotion</p>
+            </article>
+
+            <article class="education-card">
+              <p class="education-date">2020</p>
+              <h3>Baccalauréat Série D</h3>
+              <p class="education-school">FMJ Tsaramasay</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer" aria-labelledby="footer-title">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            class="footer-logo"
+            src="images/kr_logo.svg"
+            alt="Logo KR de Koloina Rajoelison"
+          />
+          <h2 id="footer-title" class="footer-name">Koloina Rajoelison</h2>
+          <p class="footer-quote">
+            "Créer, communiquer et valoriser les marques<br />
+            dans un monde en constante évolution."
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <div class="footer-socials" aria-label="Réseaux sociaux">
+            <a
+              href="https://www.instagram.com/koloinarajoelison/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de Koloina Rajoelison"
+            >
+              <img src="images/instagram.svg" alt="" aria-hidden="true" />
+            </a>
+            <a
+              href="https://www.facebook.com/koloina.rajoelison25"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook de Koloina Rajoelison"
+            >
+              <img src="images/facebook-2.svg" alt="" aria-hidden="true" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/koloina-stephanie/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Koloina Rajoelison"
+            >
+              <img src="images/linkedin.svg" alt="" aria-hidden="true" />
+            </a>
+          </div>
+
+          <a class="footer-email" href="mailto:koloinarajoelison25@gmail.com">
+            koloinarajoelison25@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>2026 © Tous droits réservés</p>
+      </div>
     </footer>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
